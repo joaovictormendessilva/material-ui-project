@@ -11,5 +11,11 @@ export const LightTheme = createTheme({
     h6: {
       color: "#00788d"
     },
+    body1: {
+      color: "#00788d"
+    },
+    body2: {
+      color: '#5b5b5b',
+    }
   }
 })

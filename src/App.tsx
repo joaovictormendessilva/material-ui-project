@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-import { Login } from "./pages";
+import { Dashboard, Login } from "./pages";
 
 import { ThemeContextProvider } from './shared/contexts/'
 
@@ -8,7 +8,8 @@ export function App() {
   return (
     <ThemeContextProvider>
       <Box>
-        <Login />
+        {/* <Login /> */}
+        <Dashboard />
       </Box>
     </ThemeContextProvider>
   )
