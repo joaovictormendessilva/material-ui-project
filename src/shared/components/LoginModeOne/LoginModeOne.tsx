@@ -24,14 +24,14 @@ export function LoginModeOne() {
 
   const handleCheckLogin = () => {
 
-    if (!inputDataModeOne.cpf_cnpj) {
-      setIsEmptyCheck((prev) => ({ ...prev, cpf_cnpj: true }))
-    }
-    if (!inputDataModeOne.password) {
-      setIsEmptyCheck((prev) => ({ ...prev, password: true }))
+    const isEmptyFields = {
+      cpf_cnpj: !inputDataModeOne.cpf_cnpj,
+      password: !inputDataModeOne.password
     }
 
-    if (inputDataModeOne.cpf_cnpj && inputDataModeOne.password) {
+    setIsEmptyCheck(isEmptyFields)
+
+    if (Object.values(isEmptyFields).every(field => !field)) {
       console.log("Sucesso Mode 1", inputDataModeOne)
     }
     else {
@@ -40,12 +40,9 @@ export function LoginModeOne() {
   }
 
   useEffect(() => {
-    setIsEmptyCheck((prev) => ({ ...prev, cpf_cnpj: false }))
-  }, [inputDataModeOne.cpf_cnpj])
-
-  useEffect(() => {
-    setIsEmptyCheck((prev) => ({ ...prev, password: false }))
-  }, [inputDataModeOne.password])
+    inputDataModeOne.cpf_cnpj && setIsEmptyCheck((prev) => ({ ...prev, cpf_cnpj: false }))
+    inputDataModeOne.password && setIsEmptyCheck((prev) => ({ ...prev, password: false }))
+  }, [inputDataModeOne.cpf_cnpj, inputDataModeOne.password])
 
   return (
     <>

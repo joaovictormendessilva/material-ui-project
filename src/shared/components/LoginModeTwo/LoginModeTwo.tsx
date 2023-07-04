@@ -1,6 +1,6 @@
 import { TextField, Box, Button } from "@mui/material";
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 interface IInputDataModeTwoProps {
   grupo: string
@@ -42,6 +42,13 @@ export function LoginModeTwo() {
       console.log("Erro Mode 2", inputDataModeTwo);
     }
   };
+
+  useEffect(() => {
+    inputDataModeTwo.cota && setIsEmptyCheck((prev) => ({ ...prev, cota: false }))
+    inputDataModeTwo.grupo && setIsEmptyCheck((prev) => ({ ...prev, grupo: false }))
+    inputDataModeTwo.versao && setIsEmptyCheck((prev) => ({ ...prev, versao: false }))
+    inputDataModeTwo.password && setIsEmptyCheck((prev) => ({ ...prev, password: false }))
+  }, [inputDataModeTwo.cota, inputDataModeTwo.grupo, inputDataModeTwo.versao, inputDataModeTwo.password])
 
 
   return (
