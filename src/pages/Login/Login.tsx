@@ -4,9 +4,9 @@ import HorizontalSplitOutlinedIcon from '@mui/icons-material/HorizontalSplitOutl
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
 import { useState } from "react";
-import { BoletoRapido, LoginModeOne, LoginModeTwo } from "../../shared/components";
+import { BoletoRapido, LoginModeOne, LoginModeTwo, ValoresADevolver } from "../../shared/components";
 
-type Mode = 'Mode1' | 'Mode2' | 'Mode3'
+type Mode = 'Mode1' | 'Mode2' | 'Mode3' | 'Mode4'
 
 export function Login() {
   const theme = useTheme();
@@ -29,13 +29,13 @@ export function Login() {
             <Divider sx={{ width: theme.spacing(3), borderWidth: "2px" }} color={theme.palette.primary.main} />
           </Box>
 
-          {(loginMode !== 'Mode3' && (
+          {(loginMode !== 'Mode3' && loginMode !== 'Mode4' && (
             <Box display="flex" marginTop={1}>
               <Button
                 fullWidth
                 variant={loginMode === 'Mode1' ? 'contained' : 'outlined'}
                 disableElevation
-                sx={{ borderRadius: 0, fontWeight: "bold" }}
+                sx={{ borderEndEndRadius: 0, borderTopRightRadius: 0, fontWeight: "bold" }}
                 onClick={() => toggleLoginMode('Mode1')}>
                 CPF/CNPJ
               </Button>
@@ -43,7 +43,7 @@ export function Login() {
               <Button
                 fullWidth
                 variant={loginMode === 'Mode2' ? 'contained' : 'outlined'}
-                disableElevation sx={{ borderRadius: 0, fontWeight: "bold" }}
+                disableElevation sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0, fontWeight: "bold" }}
                 onClick={() => toggleLoginMode('Mode2')}>
                 Grupo/Cota
               </Button>
@@ -62,9 +62,13 @@ export function Login() {
             {(loginMode === 'Mode3' && (
               <BoletoRapido backToLogin={() => setLoginMode('Mode1')} />
             ))}
+
+            {(loginMode === 'Mode4' && (
+              <ValoresADevolver backToLogin={() => setLoginMode('Mode1')} />
+            ))}
           </Box>
 
-          {(loginMode !== 'Mode3' && (
+          {(loginMode !== 'Mode3' && loginMode !== 'Mode4' && (
             <>
               <Box marginTop={2}>
                 <Button
@@ -86,7 +90,12 @@ export function Login() {
                   <ChevronRightOutlinedIcon fontSize="small" />
                   Esqueci minha senha
                 </Link>
-                <Link underline="none" display="flex" alignItems="center">
+                <Link
+                  underline="none"
+                  display="flex"
+                  alignItems="center"
+                  sx={{ cursor: 'pointer' }}
+                  onClick={() => setLoginMode('Mode4')}>
                   <ChevronRightOutlinedIcon fontSize="small" />
                   Valores a devolver
                 </Link>
