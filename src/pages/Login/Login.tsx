@@ -102,7 +102,6 @@ export function Login() {
               </Box>
             </>
           ))}
-
         </Box>
       </Card>
     </Box>
