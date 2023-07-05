@@ -107,13 +107,12 @@ export function CardConsorcioInfo() {
 
             <ListItem disablePadding>
               <ListItemText sx={{ textAlign: 'right' }}>
-                <Typography fontSize={14} fontWeight='bold' variant='body2'>
+                <Typography fontSize={14} fontWeight='bold' variant='body2' display="flex" alignItems="center" justifyContent="flex-end">
                   <Link
                     underline='none'
                     sx={{ cursor: 'pointer' }}
                     display="flex"
-                    alignItems="center"
-                    justifyContent="flex-end">
+                    alignItems="center">
                     Ver detalhes
                     <ArrowRightAltIcon />
                   </Link>
