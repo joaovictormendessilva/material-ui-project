@@ -1,6 +1,7 @@
 import { Typography, List, ListItem, ListItemText, Divider, Link } from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ArticleIcon from '@mui/icons-material/Article';
 
 import { CardLayout } from "../../layouts";
 
@@ -8,7 +9,8 @@ export function CardExtrato() {
   return (
     <CardLayout>
       <Typography variant='h6' fontWeight="bold" fontSize={14} display="flex" alignItems="center" gap={1}>
-        Oferta Lance
+        <ArticleIcon sx={{ padding: 0.2 }} fontSize="inherit" />
+        Extrato
       </Typography>
 
       <List>
