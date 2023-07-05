@@ -5,3 +5,4 @@ export * from './ValoresADevolver/ValoresADevolver';
 export * from './CardConsorcioInfo/CardConsorcioInfo';
 export * from './CardOfertaLance/CardOfertaLance';
 export * from './CardSegundaViaBoleto/CardSegundaViaBoleto';
+export * from './CardExtrato/CardExtrato';

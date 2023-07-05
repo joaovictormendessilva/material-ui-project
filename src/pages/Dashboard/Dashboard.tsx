@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { CardConsorcioInfo, CardOfertaLance, CardSegundaViaBoleto } from '../../shared/components';
+import { CardConsorcioInfo, CardExtrato, CardOfertaLance, CardSegundaViaBoleto } from '../../shared/components';
 
 export function Dashboard() {
 
@@ -13,6 +13,7 @@ export function Dashboard() {
         <Box display="flex" flexDirection="column" gap={3}>
           <CardOfertaLance />
           <CardSegundaViaBoleto />
+          <CardExtrato />
         </Box>
       </Box>
     </Box>
