@@ -1,15 +1,15 @@
-import { Box, Card, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import GavelIcon from '@mui/icons-material/Gavel';
 import BackHandIcon from '@mui/icons-material/BackHand';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import ViewWeekIcon from '@mui/icons-material/ViewWeek';
 
-export function CardOfertaLance() {
-  const theme = useTheme();
+import { CardLayout } from "../../layouts";
 
+export function CardOfertaLance() {
   return (
     <>
-      <Card sx={{ width: theme.spacing(36), padding: 2 }}>
+      <CardLayout>
         <Box>
           <Typography variant='h6' fontWeight="bold" fontSize={14} display="flex" alignItems="center" gap={1}>
             <GavelIcon sx={{ padding: 0.2 }} fontSize="inherit" />
@@ -47,7 +47,7 @@ export function CardOfertaLance() {
             </Typography>
           </Box>
         </Box>
-      </Card>
+      </CardLayout>
     </>
   )
 }

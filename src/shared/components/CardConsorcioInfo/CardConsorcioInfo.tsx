@@ -1,12 +1,14 @@
-import { List, ListItem, ListItemText, Typography, Link, Box, Card, useTheme } from '@mui/material'
+import { List, ListItem, ListItemText, Typography, Link, Box, useTheme } from '@mui/material'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+
+import { CardLayout } from '../../layouts';
 
 export function CardConsorcioInfo() {
   const theme = useTheme()
   return (
     <>
-      <Card sx={{ width: theme.spacing(36), padding: 2 }}>
+      <CardLayout>
         <Box display="flex" justifyContent="space-between">
           <Typography variant='h6' fontWeight="bold" fontSize={14}>
             OLÁ JOÃO VICTOR MENDES
@@ -140,7 +142,7 @@ export function CardConsorcioInfo() {
             />
           </Box>
         </Box>
-      </Card>
+      </CardLayout>
     </>
   )
 }
