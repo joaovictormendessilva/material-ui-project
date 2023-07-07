@@ -5,6 +5,9 @@ export const LightTheme = createTheme({
     primary: {
       main: "#00788d",
       contrastText: '#ffffff'
+    },
+    background: {
+      default: "#f1f1f1"
     }
   },
   typography: {
@@ -16,6 +19,6 @@ export const LightTheme = createTheme({
     },
     body2: {
       color: '#5b5b5b',
-    }
+    },
   }
 })

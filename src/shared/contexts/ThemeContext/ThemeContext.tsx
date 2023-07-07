@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
 import { createContext, useContext, useMemo } from "react";
 import { LightTheme } from "../../theme";
 
@@ -29,7 +29,9 @@ export function ThemeContextProvider({ children }: IThemeContextProps) {
   return (
     <ThemeContext.Provider value={{ themeName }}>
       <ThemeProvider theme={theme!}>
-        {children}
+        <Box bgcolor={theme?.palette.background.default}>
+          {children}
+        </Box>
       </ThemeProvider>
     </ThemeContext.Provider>
   )
