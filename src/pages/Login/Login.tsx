@@ -5,6 +5,7 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
 import { useState } from "react";
 import { BoletoRapido, LoginModeOne, LoginModeTwo, ValoresADevolver } from "../../shared/components";
+import { useAuthContext } from "../../shared/contexts";
 
 type Mode = 'Mode1' | 'Mode2' | 'Mode3' | 'Mode4'
 
@@ -18,8 +19,10 @@ export function Login() {
     mode === 'Mode1' ? setLoginMode('Mode1') : setLoginMode('Mode2')
   }
 
+  const { isLogged } = useAuthContext()
+
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" height="100vh" width="100%">
+    !isLogged && <Box display="flex" justifyContent="center" alignItems="center" height="100vh" width="100%">
       <Card sx={{ width: theme.spacing(50) }} elevation={smDown ? 0 : 1}>
         <Box padding={5}>
           <Box>

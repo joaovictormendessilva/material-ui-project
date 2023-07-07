@@ -1,10 +1,13 @@
 import { Box, Grid } from '@mui/material'
 import { CardAnteciparQuitar, CardAssembleias, CardConsorcioInfo, CardExtrato, CardOfertaLance, CardSegundaViaBoleto, MeuRepresentante } from '../../shared/components';
+import { useAuthContext } from '../../shared/contexts';
 
 export function Dashboard() {
 
+  const { isLogged } = useAuthContext();
+
   return (
-    <Box padding={2}>
+    isLogged && <Box padding={2}>
       <Grid container spacing={1} >
         <Grid item lg={3} md={12} sm={12} container>
           <Grid item display="flex">

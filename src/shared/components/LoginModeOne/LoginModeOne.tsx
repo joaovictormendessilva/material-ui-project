@@ -1,6 +1,9 @@
 import { Box, Button, TextField } from "@mui/material";
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
+
 import { ChangeEvent, useState, useEffect } from "react";
+import { useAuthContext } from "../../contexts";
+
 
 interface IInputDataModeOneProps {
   cpf_cnpj: string
@@ -14,6 +17,8 @@ export function LoginModeOne() {
     cpf_cnpj: false,
     password: false
   })
+
+  const { setLocalStorageWithExpiration } = useAuthContext()
 
   const handleChangeInputs = (e: ChangeEvent<HTMLInputElement>) => {
     setInputDataModeOne((prev) => ({
@@ -33,6 +38,7 @@ export function LoginModeOne() {
 
     if (Object.values(isEmptyFields).every(field => !field)) {
       console.log("Sucesso Mode 1", inputDataModeOne)
+      setLocalStorageWithExpiration("session", inputDataModeOne, 1);
     }
     else {
       console.log("Erro Mode 1", inputDataModeOne)
