@@ -1,25 +1,43 @@
-import { Box } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import { CardAssembleias, CardConsorcioInfo, CardExtrato, CardOfertaLance, CardSegundaViaBoleto } from '../../shared/components';
 
 export function Dashboard() {
 
   return (
     <Box padding={2}>
-      <Box display="flex" gap={2}>
-        <Box>
-          <CardConsorcioInfo />
-        </Box>
+      <Grid container spacing={1} >
+        <Grid item lg={3} md={12} sm={12} container>
+          <Grid item display="flex">
+            <CardConsorcioInfo />
+          </Grid>
+        </Grid>
 
-        <Box display="flex" flexDirection="column" gap={3}>
-          <CardOfertaLance />
-          <CardSegundaViaBoleto />
-          <CardExtrato />
-        </Box>
+        <Grid item lg={7} md={12} sm={12}>
 
-        <Box display="flex" flexDirection="column" gap={3}>
-          <CardAssembleias />
-        </Box>
-      </Box>
-    </Box>
+          <Grid item container spacing={1} md={12}>
+            <Grid item display="flex" flexDirection="column" gap={1} lg={6} md={6} sm={6} xs={12}>
+              <CardOfertaLance />
+              <CardSegundaViaBoleto />
+            </Grid>
+
+            <Grid item lg={6} md={6} sm={6} xs={12} display="flex">
+              <CardAssembleias />
+            </Grid>
+          </Grid>
+
+          <Grid item container spacing={1} marginTop={1} md={12} >
+            <Grid item display="flex" lg={6} md={6} sm={6} xs={12}>
+              <CardExtrato />
+            </Grid>
+
+            <Grid item display="flex" flexDirection="column" gap={1} lg={6} md={6} sm={6} xs={12}>
+              <CardOfertaLance />
+              <CardSegundaViaBoleto />
+            </Grid>
+          </Grid>
+
+        </Grid>
+      </Grid>
+    </Box >
   )
 }

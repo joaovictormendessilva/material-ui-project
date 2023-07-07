@@ -4,7 +4,7 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 export function CardAssembleias() {
   return (
-    <CardLayout>
+    <CardLayout >
       <Typography variant='h6' fontWeight="bold" fontSize={14} display="flex" alignItems="center" gap={1}>
         <PeopleAltIcon sx={{ padding: 0.2 }} fontSize="inherit" />
         Assembleias

@@ -17,7 +17,7 @@ export function CardOfertaLance() {
           </Typography>
         </Box>
 
-        <Box display="flex" gap={1} marginTop={1}>
+        <Box display="flex" justifyContent="space-between" gap={1} marginTop={1}>
           <Box display="flex" flexDirection="column" gap={1}>
             <Typography variant="body2" fontWeight="bold" display="flex" alignItems="center" gap={1}>
               <BackHandIcon sx={{ border: "solid 1px #ccc", borderRadius: "3px", padding: 0.2 }} fontSize="inherit" />

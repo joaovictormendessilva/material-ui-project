@@ -7,10 +7,8 @@ import { ThemeContextProvider } from './shared/contexts/'
 export function App() {
   return (
     <ThemeContextProvider>
-      <Box>
-        {/* <Login /> */}
-        <Dashboard />
-      </Box>
+      {/* <Login /> */}
+      <Dashboard />
     </ThemeContextProvider>
   )
 }
