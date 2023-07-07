@@ -3,7 +3,7 @@ import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Legend);
 
-export const data = {
+const data = {
   labels: ['Feitas'],
   datasets: [
     {

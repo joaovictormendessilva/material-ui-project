@@ -1,9 +1,10 @@
-import { Typography, List, ListItem, ListItemText, Divider, Link } from "@mui/material";
+import { Typography, List, ListItem, ListItemText, Divider, Link, Box } from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import ArticleIcon from '@mui/icons-material/Article';
 
 import { CardLayout } from "../../layouts";
+import { DoughnutChart } from "../../charts";
 
 export function CardExtrato() {
   return (
@@ -75,6 +76,10 @@ export function CardExtrato() {
             </Typography>
           </ListItemText>
         </ListItem>
+
+        <Box width="120px">
+          <DoughnutChart />
+        </Box>
 
         <ListItem disablePadding>
           <ListItemText sx={{ textAlign: 'right' }}>
