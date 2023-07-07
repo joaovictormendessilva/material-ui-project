@@ -1,5 +1,5 @@
 import { Box, Grid } from '@mui/material'
-import { CardAnteciparQuitar, CardAssembleias, CardConsorcioInfo, CardExtrato, CardOfertaLance, CardSegundaViaBoleto } from '../../shared/components';
+import { CardAnteciparQuitar, CardAssembleias, CardConsorcioInfo, CardExtrato, CardOfertaLance, CardSegundaViaBoleto, MeuRepresentante } from '../../shared/components';
 
 export function Dashboard() {
 
@@ -32,7 +32,7 @@ export function Dashboard() {
 
             <Grid item display="flex" flexDirection="column" gap={1} lg={6} md={6} sm={6} xs={12}>
               <CardAnteciparQuitar />
-              <CardAnteciparQuitar />
+              <MeuRepresentante />
             </Grid>
           </Grid>
 

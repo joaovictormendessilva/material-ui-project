@@ -7,4 +7,5 @@ export * from './CardOfertaLance/CardOfertaLance';
 export * from './CardSegundaViaBoleto/CardSegundaViaBoleto';
 export * from './CardExtrato/CardExtrato';
 export * from './CardAssembleias/CardAssembleias';
-export * from './CardAnteciparQuitar/CardAnteciparQuitar'
+export * from './CardAnteciparQuitar/CardAnteciparQuitar';
+export * from './MeuRepresentante/MeuRepresentante';
