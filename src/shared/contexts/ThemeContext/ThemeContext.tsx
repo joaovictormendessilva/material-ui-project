@@ -29,7 +29,7 @@ export function ThemeContextProvider({ children }: IThemeContextProps) {
   return (
     <ThemeContext.Provider value={{ themeName }}>
       <ThemeProvider theme={theme!}>
-        <Box bgcolor={theme?.palette.background.default}>
+        <Box height="100vh" bgcolor={theme?.palette.background.default}>
           {children}
         </Box>
       </ThemeProvider>

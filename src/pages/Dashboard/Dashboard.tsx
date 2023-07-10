@@ -7,8 +7,9 @@ export function Dashboard() {
   const { isLogged } = useAuthContext();
 
   return (
-    isLogged && <Box padding={2}>
-      <Grid container spacing={1} >
+    isLogged &&
+    <Box padding={2}>
+      <Grid container spacing={1}>
         <Grid item lg={3} md={12} sm={12} container>
           <Grid item display="flex">
             <CardConsorcioInfo />
@@ -28,7 +29,7 @@ export function Dashboard() {
             </Grid>
           </Grid>
 
-          <Grid item container spacing={1} marginTop={1} md={12} >
+          <Grid item container spacing={1} paddingTop={1} md={12} >
             <Grid item display="flex" lg={6} md={6} sm={6} xs={12}>
               <CardExtrato />
             </Grid>
@@ -38,7 +39,6 @@ export function Dashboard() {
               <MeuRepresentante />
             </Grid>
           </Grid>
-
         </Grid>
       </Grid>
     </Box >

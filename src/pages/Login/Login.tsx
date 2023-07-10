@@ -22,7 +22,8 @@ export function Login() {
   const { isLogged } = useAuthContext()
 
   return (
-    !isLogged && <Box display="flex" justifyContent="center" alignItems="center" height="100vh" width="100%">
+    !isLogged &&
+    <Box display="flex" justifyContent="center" alignItems="center" height="100vh" width="100%">
       <Card sx={{ width: theme.spacing(50) }} elevation={smDown ? 0 : 1}>
         <Box padding={5}>
           <Box>
