@@ -11,7 +11,7 @@ export function CardConsorcioInfo() {
   return (
     <>
       <CardLayout>
-        <Box display="flex" flexDirection={mdDown ? "row" : "column"} gap={mdDown ? 1 : 0}>
+        <Box display="flex" flexDirection={mdDown ? "row" : "column"} gap={mdDown ? 2 : 0}>
           <Box width="100%">
             <Box display="flex" justifyContent="space-between">
               <Typography variant='h6' fontWeight="bold" fontSize={14}>
